@@ -41,7 +41,7 @@
         <Button x:Name="btnBeallitas" Content="Beállítás" HorizontalAlignment="Left" Margin="38,302,0,0" VerticalAlignment="Top" Width="59" Click="btnBeallitas_Click"/>
         <Button x:Name="btnLegolcsobb" Content="Melyik a legolcsóbb?" HorizontalAlignment="Left" Margin="120,302,0,0" VerticalAlignment="Top" Width="129" Click="btnLegolcsobb_Click"/>
         <Button x:Name="btnAlkalmaz" Content="Alkalmaz" HorizontalAlignment="Left" Margin="275,302,0,0" VerticalAlignment="Top" Width="68" Click="btnAlkalmaz_Click"/>
-        <Button x:Name="btnKilepes" Content="Kilépés" HorizontalAlignment="Left" Margin="400,365,0,0" VerticalAlignment="Top" Width="76" Click="btnKilepes_Click"/>
+        <Button x:Name="btnKilepes" Content="Kilépés" HorizontalAlignment="Left" Margin="400,365,0,0" VerticalAlignment="Top" Width="76"/>
 
     </Grid>
 </Window>

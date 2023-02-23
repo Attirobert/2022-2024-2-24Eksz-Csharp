@@ -18,12 +18,33 @@ namespace HuvelykMatyi
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+    struct Keszlet
+    {
+        public Button nap;
+        public TextBox ar;
+    }
+
+    
     public partial class MainWindow : Window
     {
+        List<Keszlet> keszlet = new List<Keszlet>();
+        //Dictionary<>
         public MainWindow()
         {
             InitializeComponent();
+            keszletLoad();
             arAllitas(false);
+        }
+
+        private void keszletLoad()
+        {
+            Keszlet klt = new Keszlet();
+            klt.nap = btnHetfo;
+            klt.ar = tbxHetfo;
+            keszlet.Add(klt);
+
+
         }
 
         private void btn_Click(object sender, RoutedEventArgs e)
