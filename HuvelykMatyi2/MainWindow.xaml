@@ -30,10 +30,10 @@
         <TextBox x:Name="tbxSzombat" HorizontalAlignment="Left" Margin="100,211,0,0" Text="180" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" RenderTransformOrigin="0.513,0.382" TextAlignment="Right" LostFocus="tbx_LostFocus"/>
         <Label Content="Margaréta" HorizontalAlignment="Left" Margin="28,207,0,0" VerticalAlignment="Top" Width="69"/>
         <Label Content="Ft" HorizontalAlignment="Left" Margin="144,207,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.553"/>
-        <Button x:Name="btnSzombat_Copy2" Content="Szombat" HorizontalAlignment="Left" Margin="189,210,0,0" VerticalAlignment="Top" Width="60" Click="btn_Click"/>
+        <Button x:Name="btnSzombat" Content="Szombat" HorizontalAlignment="Left" Margin="189,210,0,0" VerticalAlignment="Top" Width="60" Click="btn_Click"/>
         <Label Content="Szegfű" HorizontalAlignment="Left" Margin="28,232,0,0" VerticalAlignment="Top" Width="69"/>
         <Label Content="Ft" HorizontalAlignment="Left" Margin="142,232,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.553"/>
-        <Button x:Name="btnVasarnap_Copy2" Content="Vasárnap" HorizontalAlignment="Left" Margin="189,235,0,0" VerticalAlignment="Top" Width="60" Click="btn_Click"/>
+        <Button x:Name="btnVasarnap" Content="Vasárnap" HorizontalAlignment="Left" Margin="189,235,0,0" VerticalAlignment="Top" Width="60" Click="btn_Click"/>
         <TextBox x:Name="tbxVasarnap" HorizontalAlignment="Left" Margin="100,236,0,0" Text="90" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" RenderTransformOrigin="0.513,0.382" TextAlignment="Right" LostFocus="tbx_LostFocus"/>
         <Label Content="Összesen:" HorizontalAlignment="Left" Margin="292,108,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxOsszesen" HorizontalAlignment="Left" Margin="301,134,0,0" Text="Összesen" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" TextAlignment="Right"/>
@@ -41,7 +41,7 @@
         <Button x:Name="btnBeallitas" Content="Beállítás" HorizontalAlignment="Left" Margin="38,302,0,0" VerticalAlignment="Top" Width="59" Click="btnBeallitas_Click"/>
         <Button x:Name="btnLegolcsobb" Content="Melyik a legolcsóbb?" HorizontalAlignment="Left" Margin="120,302,0,0" VerticalAlignment="Top" Width="129" Click="btnLegolcsobb_Click"/>
         <Button x:Name="btnAlkalmaz" Content="Alkalmaz" HorizontalAlignment="Left" Margin="275,302,0,0" VerticalAlignment="Top" Width="68" Click="btnAlkalmaz_Click"/>
-        <Button x:Name="btnKilepes" Content="Kilépés" HorizontalAlignment="Left" Margin="400,365,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="btnKilepes" Content="Kilépés" HorizontalAlignment="Left" Margin="400,365,0,0" VerticalAlignment="Top" Width="76" Click="btnKilepes_Click"/>
 
     </Grid>
 </Window>
