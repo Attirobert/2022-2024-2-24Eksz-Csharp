@@ -1,0 +1,21 @@
+﻿<Window x:Class="Hianyzasok.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hianyzasok"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btn1Olvas" Content="1. Beolvas" HorizontalAlignment="Left" Margin="46,42,0,0" VerticalAlignment="Top" Width="108" Click="btn1Olvas_Click"/>
+        <Button x:Name="btn2OsszMulaszt" Content="2. Összes mulasztás" HorizontalAlignment="Left" Margin="46,79,0,0" VerticalAlignment="Top" Click="btn2OsszMulaszt_Click"/>
+        <Button x:Name="btn3Adatbe" Content="3. Adatbekérés" HorizontalAlignment="Left" Margin="46,120,0,0" VerticalAlignment="Top" Width="108"/>
+        <ComboBox x:Name="cbxNevek" HorizontalAlignment="Left" Margin="179,119,0,0" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="dtpDatum" HorizontalAlignment="Left" Margin="179,159,0,0" VerticalAlignment="Top" DisplayDateStart="2017-09-17" FirstDayOfWeek="Monday" Width="120"/>
+        <Button x:Name="btn4DiakHianyzasa" Content="4. Diák hiányzása" HorizontalAlignment="Left" Margin="46,202,0,0" VerticalAlignment="Top" Width="108" Click="btn4DiakHianyzasa_Click"/>
+        <Button x:Name="btn5DiakokHianyzasa" Content="5. Diákok hiányzása" HorizontalAlignment="Left" Margin="46,251,0,0" VerticalAlignment="Top" Width="108" Click="btn5DiakokHianyzasa_Click"/>
+        <Button x:Name="btn6Kiiras" Content="6. Fájlba írás" HorizontalAlignment="Left" Margin="46,303,0,0" VerticalAlignment="Top" Width="108" Click="btn6Kiiras_Click"/>
+        <TextBox x:Name="tbxOut" HorizontalAlignment="Left" Margin="356,42,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="281"/>
+
+    </Grid>
+</Window>
