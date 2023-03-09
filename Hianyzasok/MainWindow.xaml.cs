@@ -46,7 +46,7 @@ namespace Hianyzasok
 
             tbxOut.Text = "\n\n1. feladat - ";
 
-            using (StreamReader sr = new StreamReader(inFile, Encoding.Default))
+            using (StreamReader sr = new StreamReader(inFile, Encoding.UTF8))
             {
                 sr.ReadLine();
 
@@ -120,7 +120,7 @@ namespace Hianyzasok
                 .Where(x => x.Elso <= nap && x.Utolso >= nap)
                 .OrderBy(x => x.Nev)
                 .Select(x => x.Nev)
-                .ToArray();
+                .ToArray(); // ToList<>(), ToDictionary<>()
 
             tbxOut.Text += "\n\n5. feladat\n";
             if (eredm.Length > 0)
@@ -136,7 +136,7 @@ namespace Hianyzasok
 
             // Külön tömbbe kigyüjtöm a hiányzásokat
             int[] osztHianyzas = new int[osztalyok.Length];
-            for (int i = 0; i < osztalyok.Length; i++)
+            for (int i = 0; i < osztalyok.Length; i++)  
                 for (int j = 0; j < adatok.Count; j++)
                     if (adatok[j].Osztaly == osztalyok[i])
                         osztHianyzas[i] += (adatok[j].M_Orak);
@@ -149,8 +149,9 @@ namespace Hianyzasok
             // Kiíratás fájlba
             using (StreamWriter sw = new StreamWriter(outFile))
             {
+                sw.WriteLine("Osztályok" + "; " + "Órák");
                 for (int i = 0; i < osztalyok.Length; i++)
-                    sw.WriteLine(osztalyok[i] + ": " + Convert.ToString(osztHianyzas[i]));
+                    sw.WriteLine(osztalyok[i] + "; " + Convert.ToString(osztHianyzas[i]));
 
                 sw.Close();
             }
