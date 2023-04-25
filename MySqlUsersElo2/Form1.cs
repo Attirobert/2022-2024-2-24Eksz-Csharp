@@ -47,12 +47,23 @@ namespace MySqlUsersElo2
             canToRead = "Az olvasás megkezdődhet!",
             closedDB = "Az adatbázis bezárva";
 
+        // Gombok kollekciója
+        private List<Button> lstButtons = new List<Button>();
+
         #endregion Változók definiálása
 
 
         public Form1()
         {
             InitializeComponent();
+            // Gomb lista feltöltése
+            lstButtons.Add(btnConn);
+            lstButtons.Add(btnOpen);
+            lstButtons.Add(btnRead);
+            lstButtons.Add(btnInsert);
+            lstButtons.Add(btnUpdate);
+            lstButtons.Add(btnDelete);
+            lstButtons.Add(btnClose);
         }
 
         private void btnConn_Click(object sender, EventArgs e)
@@ -92,22 +103,16 @@ namespace MySqlUsersElo2
             switch (fs)
             {
                 case FormState.Closed:
+                    foreach (var item in lstButtons)
+                        item.Enabled = false;
                     btnConn.Enabled = true;
-                    btnOpen.Enabled = false;
-                    btnRead.Enabled = false;
-                    btnInsert.Enabled = false;
-                    btnUpdate.Enabled = false;
-                    btnDelete.Enabled = false;
-                    btnClose.Enabled = false;
                     break;
+
                 case FormState.Opened:
+                    foreach (var item in lstButtons)
+                        item.Enabled = true;
                     btnConn.Enabled = false;
-                    btnOpen.Enabled = true;
                     btnRead.Enabled = false;
-                    btnInsert.Enabled = true;
-                    btnUpdate.Enabled = true;
-                    btnDelete.Enabled = true;
-                    btnClose.Enabled = true;
 
                     tbxID.Enabled = false;
                     tbxNev.Enabled = false;
@@ -118,22 +123,18 @@ namespace MySqlUsersElo2
                     btnInsert.Text = insBasic;
                     btnUpdate.Text = updBasic;
                     break;
+
                 case FormState.Reading:
+                    foreach (var item in lstButtons)
+                        item.Enabled = true;
                     btnConn.Enabled = false;
                     btnOpen.Enabled = false;
-                    btnRead.Enabled = true;
-                    btnInsert.Enabled = true;
-                    btnUpdate.Enabled = true;
-                    btnDelete.Enabled = true;
-                    btnClose.Enabled = true;
                     break;
+
                 case FormState.EditInsert:
-                    btnConn.Enabled = false;
-                    btnOpen.Enabled = false;
-                    btnRead.Enabled = false;
+                    foreach (var item in lstButtons)
+                        item.Enabled = false;
                     btnInsert.Enabled = true;
-                    btnUpdate.Enabled = false;
-                    btnDelete.Enabled = false;
                     btnClose.Enabled = true;
 
                     // Beviteli mezők elérhetősége
@@ -149,13 +150,11 @@ namespace MySqlUsersElo2
                     // Gomb feliratok
                     btnInsert.Text = insEdit;
                     break;
+
                 case FormState.EditUpdate:
-                    btnConn.Enabled = false;
-                    btnOpen.Enabled = false;
-                    btnRead.Enabled = false;
-                    btnInsert.Enabled = false;
+                    foreach (var item in lstButtons)
+                        item.Enabled = false;
                     btnUpdate.Enabled = true;
-                    btnDelete.Enabled = false;
                     btnClose.Enabled = true;
 
                     tbxNev.Enabled = true;
@@ -251,7 +250,7 @@ namespace MySqlUsersElo2
 
                 try
                 {
-                    // Olvasás a táblából
+                    // Végrehajtás a táblán
                     sqlComm.ExecuteNonQuery();
                     MessageBox.Show("Az rekord felvétele sikeres.");
                 }
@@ -305,7 +304,7 @@ namespace MySqlUsersElo2
 
                 try
                 {
-                    // Olvasás a táblából
+                    // Írás a táblába
                     sqlComm.ExecuteNonQuery();
                     MessageBox.Show("Az rekord módosítása sikeres.");
                 }
