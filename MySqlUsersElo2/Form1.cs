@@ -19,6 +19,7 @@ namespace MySqlUsersElo2
         private MySqlConnection msqlConn;
         private MySqlDataReader msqlDr;
 
+        // Tárolt ejárások nevei
         private string userTeljesLista = "usersTeljesLista";
         private string userInsert = "UserInsert";
         private string userUpdate = "UserUpdate";
@@ -66,19 +67,19 @@ namespace MySqlUsersElo2
             lstButtons.Add(btnClose);
         }
 
+        #region Kapcsolódás az adatbázishoz
         private void btnConn_Click(object sender, EventArgs e)
         {
             mysqlConnect();
         }
 
-        #region Kapcsolódás az adatbázishoz
         private void mysqlConnect()
         {
             MySqlConnectionStringBuilder sb = new MySqlConnectionStringBuilder();
             sb.Server = "localhost";
             sb.UserID = "root";
             sb.Password = "";
-            sb.Database = "iktat";
+            sb.Database = "iktato";
 
             try
             {
@@ -193,12 +194,12 @@ namespace MySqlUsersElo2
         }
         #endregion Adatbázis megnyitása
 
+        #region A következő rekord olvasása
         private void btnRead_Click(object sender, EventArgs e)
         {
             NextUser();
         }
 
-        #region A következő rekord olvasása
         private void NextUser()
         {
             // A következő rekord olvasása
@@ -210,6 +211,7 @@ namespace MySqlUsersElo2
         }
         #endregion A következő rekord olvasása
 
+        #region Rekord beszúrása
         private void btnInsert_Click(object sender, EventArgs e)
         {
             switch (formState)
@@ -231,7 +233,6 @@ namespace MySqlUsersElo2
             }
         }
 
-        #region Rekord beszúrása
         private void InsertUser(string pNev, string pJelszo, int pAdmin)
         {
             using (MySqlCommand sqlComm = new MySqlCommand(userInsert, msqlConn))
@@ -262,6 +263,7 @@ namespace MySqlUsersElo2
         }
         #endregion Rekord beszúrása
 
+        #region Rekord módosítása
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             switch (formState)
@@ -283,7 +285,6 @@ namespace MySqlUsersElo2
             }
         }
 
-        #region Rekord módosítása
         private void UpdateUser(int pID, string pNev, string pJelszo, int pAdmin)
         {
             using (MySqlCommand sqlComm = new MySqlCommand(userUpdate, msqlConn))
@@ -316,6 +317,7 @@ namespace MySqlUsersElo2
         }
         #endregion Rekord módosítása
 
+        #region Rekord törlése
         private void btnDelete_Click(object sender, EventArgs e)
         {
             switch (formState)
@@ -332,7 +334,6 @@ namespace MySqlUsersElo2
             DeleteUser(Convert.ToInt32(tbxID.Text));
         }
 
-        #region Rekord törlése
         private void DeleteUser(int pID)
         {
             using (MySqlCommand sqlComm = new MySqlCommand(userDelete, msqlConn))
@@ -356,6 +357,7 @@ namespace MySqlUsersElo2
         }
         #endregion Rekord törlése
 
+        #region Form és adatbázis bezárása
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (msqlConn != null) msqlConn.Close();
@@ -370,5 +372,6 @@ namespace MySqlUsersElo2
             formState = FormState.Closed;
             buttonSwitch(formState);
         }
+        #endregion Form és adatbázis bezárása
     }
 }

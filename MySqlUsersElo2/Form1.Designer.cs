@@ -194,6 +194,7 @@ namespace MySqlUsersElo2
             this.Controls.Add(this.tbxID);
             this.Name = "Form1";
             this.Text = "MySQL élő kapcsolat demó";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
