@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33423.256
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beallitas", "Beallitas\Beallitas.csproj", "{2FEF7858-FEB5-4C0D-9802-3803F8F9D11F}"
 EndProject
@@ -30,6 +30,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{A3901D77-6285-4BA8-ADA6-D48D7517C38F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlUsersElo2", "MySqlUsersElo2\MySqlUsersElo2.csproj", "{54BDB9EF-B8EE-44AD-9CDF-01F4FFF6CCA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlKapcsNelkul2", "C:\Users\kovac\OneDrive\Beregszászi\Osztályok\2020-21 tanév\SzF 2-14esz2\Szoftverfejlesztés\BeregSzF2-14esz2\orai\MySqlKapcsNelkul2\MySqlKapcsNelkul2.csproj", "{8ACB30A5-AD9A-4C07-B59F-6F7F7B67564C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlUsers", "C:\Users\kovac\OneDrive\Beregszászi\Osztályok\2020-21 tanév\SzF 2-14esz2\Szoftverfejlesztés\BeregSzF2-14esz2\orai\MySqlUsers\MySqlUsers.csproj", "{1D4524F4-2527-4F29-A8FD-0BEE2D16B57D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlKapNelkul", "C:\Users\kovac\OneDrive\Beregszászi\Osztályok\2020-21 tanév\SzF 2-14esz2\Szoftverfejlesztés\BeregSzF2-14esz2\orai\MySqlKapNelkul\MySqlKapNelkul\MySqlKapNelkul.csproj", "{9E88FFCD-0AA7-45D6-AE7A-C39A6845450D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +87,18 @@ Global
 		{54BDB9EF-B8EE-44AD-9CDF-01F4FFF6CCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54BDB9EF-B8EE-44AD-9CDF-01F4FFF6CCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54BDB9EF-B8EE-44AD-9CDF-01F4FFF6CCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ACB30A5-AD9A-4C07-B59F-6F7F7B67564C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ACB30A5-AD9A-4C07-B59F-6F7F7B67564C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ACB30A5-AD9A-4C07-B59F-6F7F7B67564C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ACB30A5-AD9A-4C07-B59F-6F7F7B67564C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D4524F4-2527-4F29-A8FD-0BEE2D16B57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D4524F4-2527-4F29-A8FD-0BEE2D16B57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D4524F4-2527-4F29-A8FD-0BEE2D16B57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D4524F4-2527-4F29-A8FD-0BEE2D16B57D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E88FFCD-0AA7-45D6-AE7A-C39A6845450D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E88FFCD-0AA7-45D6-AE7A-C39A6845450D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E88FFCD-0AA7-45D6-AE7A-C39A6845450D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E88FFCD-0AA7-45D6-AE7A-C39A6845450D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +111,9 @@ Global
 		{5E90DCA3-CE63-4E29-8FA7-157A76BE3954} = {184D2069-0A9C-4CDF-9510-E6C7D199BDED}
 		{28661E02-C4F7-4A09-A1E3-15246DAC1546} = {184D2069-0A9C-4CDF-9510-E6C7D199BDED}
 		{54BDB9EF-B8EE-44AD-9CDF-01F4FFF6CCA9} = {A3901D77-6285-4BA8-ADA6-D48D7517C38F}
+		{8ACB30A5-AD9A-4C07-B59F-6F7F7B67564C} = {A3901D77-6285-4BA8-ADA6-D48D7517C38F}
+		{1D4524F4-2527-4F29-A8FD-0BEE2D16B57D} = {A3901D77-6285-4BA8-ADA6-D48D7517C38F}
+		{9E88FFCD-0AA7-45D6-AE7A-C39A6845450D} = {A3901D77-6285-4BA8-ADA6-D48D7517C38F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D01E2A29-D3DC-4492-9B6E-50920A99151D}
