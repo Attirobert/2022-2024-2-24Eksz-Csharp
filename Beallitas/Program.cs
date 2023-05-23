@@ -11,6 +11,7 @@ namespace Beallitas
         static void Main(string[] args)
         {
             Console.WriteLine("Helló Világ!");
+            Console.ReadKey();
         }
     }
 }

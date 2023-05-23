@@ -118,6 +118,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\StoredProcedres.sql" />
     <Content Include="Data\usersCreate.sql" />
     <Content Include="Data\usersData.sql" />
   </ItemGroup>

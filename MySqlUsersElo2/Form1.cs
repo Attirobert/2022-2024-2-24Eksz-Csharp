@@ -21,9 +21,9 @@ namespace MySqlUsersElo2
 
         // Tárolt ejárások nevei
         private string userTeljesLista = "usersTeljesLista";
-        private string userInsert = "UserInsert";
-        private string userUpdate = "UserUpdate";
-        private string userDelete = "UserDelete";
+        private string userInsert = "userInsert";
+        private string userUpdate = "userUpdate";
+        private string userDelete = "userDelete";
 
         // A Form és az adatbázis állapotai
         private enum FormState
@@ -79,7 +79,7 @@ namespace MySqlUsersElo2
             sb.Server = "localhost";
             sb.UserID = "root";
             sb.Password = "";
-            sb.Database = "iktato";
+            sb.Database = "iktat";
 
             try
             {
@@ -307,7 +307,7 @@ namespace MySqlUsersElo2
                 {
                     // Írás a táblába
                     sqlComm.ExecuteNonQuery();
-                    MessageBox.Show("Az rekord módosítása sikeres.");
+                    MessageBox.Show("A rekord módosítása sikeres.");
                 }
                 catch (Exception ex)
                 {
@@ -320,11 +320,6 @@ namespace MySqlUsersElo2
         #region Rekord törlése
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            switch (formState)
-            {
-                case FormState.Reading:
-                    break;
-            }
             if (formState == FormState.Reading)
             {
                 msqlDr.Close();
