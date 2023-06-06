@@ -336,7 +336,7 @@ namespace MySqlUsersElo2
                 sqlComm.CommandType = CommandType.StoredProcedure;
 
                 // Paraméterek beállítása
-                sqlComm.Parameters.AddWithValue("ID", pID);
+                sqlComm.Parameters.AddWithValue("pID", pID);
 
                 try
                 {
