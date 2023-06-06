@@ -20,10 +20,10 @@ namespace MySqlUsersElo2
         private MySqlDataReader msqlDr;
 
         // Tárolt ejárások nevei
-        private string userTeljesLista = "usersTeljesLista";
-        private string userInsert = "userInsert";
-        private string userUpdate = "userUpdate";
-        private string userDelete = "userDelete";
+        private string userTeljesLista = "UserTeljesLista";
+        private string userInsert = "UserInsert";
+        private string userUpdate = "UserUpdate";
+        private string userDelete = "UserDelete";
 
         // A Form és az adatbázis állapotai
         private enum FormState
@@ -79,7 +79,7 @@ namespace MySqlUsersElo2
             sb.Server = "localhost";
             sb.UserID = "root";
             sb.Password = "";
-            sb.Database = "iktat";
+            sb.Database = "iktato";
 
             try
             {
@@ -292,16 +292,16 @@ namespace MySqlUsersElo2
                 sqlComm.CommandType = CommandType.StoredProcedure;
 
                 // Paraméterek beállítása
-                sqlComm.Parameters.AddWithValue("ID", pID);
+                sqlComm.Parameters.AddWithValue("pID", pID);
 
                 MySqlParameter p = new MySqlParameter();
-                p.ParameterName = "Nev";
+                p.ParameterName = "pNev";
                 p.Value = pNev;
                 p.MySqlDbType = MySqlDbType.String;
                 sqlComm.Parameters.Add(p);
 
-                sqlComm.Parameters.AddWithValue("Jelszo", pJelszo);
-                sqlComm.Parameters.AddWithValue("Admin", pAdmin);
+                sqlComm.Parameters.AddWithValue("pJelszo", pJelszo);
+                sqlComm.Parameters.AddWithValue("pAdmin", pAdmin);
 
                 try
                 {

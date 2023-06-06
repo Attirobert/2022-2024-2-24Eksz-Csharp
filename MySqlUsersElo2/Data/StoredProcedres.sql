@@ -21,3 +21,10 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `usersTeljesLista`()
     READS SQL DATA
 Select * FROM users$$
 DELIMITER ;
+
+DROP PROCEDURE `UserUpdate`; 
+CREATE DEFINER=`root`@`localhost` 
+PROCEDURE `UserUpdate`
+(IN `pID` INT(11), IN `pNev` VARCHAR(20) CHARSET utf8, IN `pJelszo` VARCHAR(40) CHARSET utf8, IN `pAdmin` TINYINT(1)) 
+NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER 
+UPDATE `users` SET `Nev`= pNev, `Jelszo`= pJelszo, `Admin`= pAdmin WHERE `ID_user` = pID
