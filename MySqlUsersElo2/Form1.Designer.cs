@@ -43,6 +43,7 @@ namespace MySqlUsersElo2
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnKeres = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxID
@@ -173,11 +174,22 @@ namespace MySqlUsersElo2
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnKeres
+            // 
+            this.btnKeres.Location = new System.Drawing.Point(51, 259);
+            this.btnKeres.Name = "btnKeres";
+            this.btnKeres.Size = new System.Drawing.Size(115, 23);
+            this.btnKeres.TabIndex = 6;
+            this.btnKeres.Text = "Keresés";
+            this.btnKeres.UseVisualStyleBackColor = true;
+            this.btnKeres.Click += new System.EventHandler(this.btnKeres_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 450);
+            this.Controls.Add(this.btnKeres);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -215,6 +227,7 @@ namespace MySqlUsersElo2
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnKeres;
     }
 }
 
